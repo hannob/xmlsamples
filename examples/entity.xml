@@ -1,0 +1,2 @@
+<!DOCTYPE test [ <!ENTITY world "World!" > ]>
+<x>Hello &world;</x>
