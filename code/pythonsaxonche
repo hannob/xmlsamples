@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: 0BSD
+
+import pathlib
+import sys
+
+import saxonche
+
+c = pathlib.Path(sys.argv[1]).read_text()
+
+with saxonche.PySaxonProcessor(license=False) as proc:
+    xsltproc = proc.new_xslt30_processor()
+    document = proc.parse_xml(xml_text=c)
+    print(document)
