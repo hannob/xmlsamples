@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+import sys
+import xml.etree.ElementTree
+
+et = xml.etree.ElementTree.parse(sys.argv[1])
+
+et.write(sys.stdout.buffer)
+print()
