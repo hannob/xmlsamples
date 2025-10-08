@@ -1,0 +1,8 @@
+#!/usr/bin/php
+<?php
+
+$xmlcontent = file_get_contents($argv[1]);
+
+$sx = new SimpleXMLElement($xmlcontent, LIBXML_NOENT);
+
+print($sx->asXML());
