@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+# SPDX-License-Identifier: 0BSD
+
+use strict;
+use warnings;
+
+use XML::Simple;
+
+my $xx = XMLin($ARGV[0]);
+print XMLout($xx);
