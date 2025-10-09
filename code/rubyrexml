@@ -1,0 +1,10 @@
+#!/usr/bin/ruby
+# SPDX-License-Identifier: 0BSD
+
+require 'rexml'
+include REXML
+
+open(ARGV[0]) {|f|
+  d = Document.new(f)
+  puts d.root.text
+}
