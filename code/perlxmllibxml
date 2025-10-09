@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+# SPDX-License-Identifier: 0BSD
+
+use strict;
+use warnings;
+
+use XML::LibXML;
+
+my $xx = XML::LibXML->load_xml(location => $ARGV[0]);
+print $xx->toString;
