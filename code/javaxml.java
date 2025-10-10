@@ -25,10 +25,9 @@ class javaxml {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(dom, new StreamResult(System.out));
 
-        } catch (SAXException e) {
-        } catch (IOException e) {
-        } catch (ParserConfigurationException e) {
-        } catch (TransformerException e) {
+        } catch (SAXException | IOException | ParserConfigurationException |
+                 TransformerException e) {
+            System.out.println("Exception: " + e);
         }
 
     }
