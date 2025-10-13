@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: 0BSD
+
+import sys
+
+import lxml.etree
+
+lx = lxml.etree.parse(sys.argv[1])
+
+print(lxml.etree.tostring(lx).decode())
