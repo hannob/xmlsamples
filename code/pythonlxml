@@ -1,10 +1,20 @@
 #!/usr/bin/python3
 # SPDX-License-Identifier: 0BSD
 
-import sys
+import argparse
 
 import lxml.etree
 
-lx = lxml.etree.parse(sys.argv[1])
+ap = argparse.ArgumentParser()
+ap.add_argument("file")
+ap.add_argument("-e", "--entities", action="store_true", help="Resolve entities (insecure)")
+args = ap.parse_args()
+
+if args.entities:
+    parser = lxml.etree.XMLParser(resolve_entities=True)
+else:
+    parser = lxml.etree.XMLParser()
+
+lx = lxml.etree.parse(args.file, parser)
 
 print(lxml.etree.tostring(lx).decode())
