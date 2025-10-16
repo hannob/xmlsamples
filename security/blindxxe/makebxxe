@@ -17,7 +17,7 @@ fi
 mkdir "$1"
 cp -r "$MYDIR"/{local,online} "$1"
 
-sed -i -e "s:bxxe.example.com:$1:g" "$1/local/bxxe.xml" "$1/online/bxxe.dtd"
+sed -i -e "s:bxxe.example.com:$1:g" "$1"/local/bxxe*.xml "$1"/online/bxxe*.dtd
 if [ -n "$2" ]; then
 	sed -i -e "s:/tmp/secret.txt:$2:g" "$1/online/bxxe.dtd"
 fi

