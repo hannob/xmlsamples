@@ -43,8 +43,7 @@ class javaxml {
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(dom, new StreamResult(System.out));
 
-        } catch (SAXException | IOException | ParserConfigurationException |
-                 TransformerException e) {
+        } catch (Exception e) {
             System.out.println("Exception: " + e);
         }
 
