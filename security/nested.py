@@ -11,7 +11,7 @@ for i in range(1, DEPTH):
     x = i
     while x > 0:
         ent = chr(ord("a") + x % 26) + ent
-        x = x // 26
+        x //= 26
     print(f"<!ENTITY {ent} '&{before};'>")
     before = ent
 
